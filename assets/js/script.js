@@ -1,11 +1,10 @@
 let user = {
     name :"Koray",
-    age:15,
-    city:"london",
+    age:25,
+    skills : ["html","css","js"],
+    city:"istanbul",
 }
 
-var colors = ["Red","Yellow","Blue","Purple","Black"]
+let {...rest} = user
 
-function hello (){
-    console.log("Hello World");
-}
+console.log(rest);
