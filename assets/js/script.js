@@ -1,13 +1,11 @@
-let text = "Hello World!"
+let user = {
+    name :"Koray",
+    age:15,
+    city:"london",
+}
 
-let nubmer = "365";
+var colors = ["Red","Yellow","Blue","Purple","Black"]
 
-let x = true;
-let y = false
-
-
-let user = null;
-
-let u;
-
-console.log(u +" " +user);
+function hello (){
+    console.log("Hello World");
+}
