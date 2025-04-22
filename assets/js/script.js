@@ -5,6 +5,7 @@ let user = {
     city:"istanbul",
 }
 
-let {...rest} = user
+console.log(`Benim ${user.name} Yaşım ${user.age}`);
 
-console.log(rest);
+
+
