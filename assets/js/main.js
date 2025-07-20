@@ -1,6 +1,3 @@
-const title = "Hello World"
+const urunler = ["samsung","apple","huawei",5]
 
-
-title.length > 60 ? console.log("True") : console.log("False");
-
-
+console.log(urunler);
