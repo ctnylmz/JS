@@ -1,31 +1,12 @@
-let custumer = {
-    "ad": "Çetin",
-    "soyad": "Yılmaz",
-    "Şehir": "istanbul",
-    "yas": "25",
-    "products": ["Laptop", "phone"]
+let meyve = ["Elma", "Armut", "Muz", "Portakal", "Karpuz"]
+
+for (let i = 0; i < meyve.length; i++) {
+    console.log(meyve[i]);
 }
 
-console.log(custumer);
+console.log("------------");
 
-console.log(custumer.ad + " " + custumer.soyad + " " + custumer.products[0]);
-
-
-let products = [
-    {
-        "Name": "Apple",
-        "Price": 20
-    },
-    {
-        "Name": "Samsung",
-        "Price": 10
-    },
-     {
-        "Name": "Vestel",
-        "Price": 5
-    }
-]
-
-console.log(products);
-
+meyve.forEach(meyve => {
+    console.log(meyve);
+});
 
