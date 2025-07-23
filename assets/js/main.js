@@ -1,25 +1,19 @@
-
-// sayiToplam(10, 20);
-
-// function sayiToplam(sayi1, sayi2) {
-//     console.log(sayi1 + sayi2);
-// }
-
-// sayiToplam(20, 20);
+if (true) {
+  let mesaj = "Merhaba";
+}
+console.log(mesaj); // ❌ ReferenceError
 
 
-sayiToplam(10, 20);
+if (true) {
+  var mesaj = "Merhaba";
+}
+console.log(mesaj); // 👉 "Merhaba" olur
 
-function sayiToplam(...sayilar) {
-    let toplam = 0;
 
-    for (let i = 0; i < sayilar.length; i++) {
-        toplam += sayilar[i];
-    }
-
-    console.log(toplam);
+function test() {
+  var mesaj = "Çetin";
 }
 
-sayiToplam(20, 30,50);
-
+test()
+console.log(mesaj); // ❌ ReferenceError
 
