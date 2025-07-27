@@ -1,0 +1,10 @@
+class Member{
+    - name 
+    - greet()
+}
+
+class Admin{
+    + moderateComments()
+}
+
+Admin -up-|> Member

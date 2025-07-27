@@ -5,43 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Dom</title>
+    <link rel="stylesheet" href="assets/css/stlye.css">
 </head>
 
 <body>
-    <h1>Todo App</h1>
-    <input type="text" name="todoInput">
-    <button onclick="add()">Ekle</button>
-    <ul id="list"> </ul>
-     
+    <h1>Todo List</h1>
+
+    <div class="container">
+        <div>
+            <div class="inputContext">
+                <input type="text" name="todoInput" placeholder="Bir şeyler yazınız..." />
+                <button class="Add" onclick="add()">Ekle</button>
+            </div>
+
+            <div class="restContext">
+                <button>Temizle</button>
+            </div>
+        </div>
+
+        <ul id="list">
+
+        </ul>
+    </div>
+
 
     <script>
-        let todoInput = document.querySelector('[name="todoInput"]');
+        let todoInput = document.querySelector('[name="todoInput"]')
         let todoList = document.querySelector('#list');
 
+
+
         function add() {
-           let todoName = todoInput.value;
+            let InputName = todoInput.value;
 
-           if(todoName === ""){
-            alert("Lütfen Yapılacaklar listesini ekleyin!")
-           }
-           const li = document.createElement("li");
-           li.textContent = todoName;
-           
-           const doneBtn = document.createElement("button");
-           doneBtn.textContent = "Tamamlandı";
-           doneBtn.addEventListener("click",()=> {
-            li.style.textDecoration = "line-through"
-           })
 
-           const deleteBtn = document.createElement("button");
-           deleteBtn.textContent = "Sil";
-            deleteBtn.addEventListener("click", () => {
+            const liBtnDelete = document.createElement("button");
+
+            liBtnDelete.textContent = "Sil";
+            liBtnDelete.className = "liBtnDelete";
+            liBtnDelete.addEventListener("click", () => {
                 todoList.removeChild(li);
             });
-         
-           todoList.append(li)
-           li.append(doneBtn)
-           li.append(deleteBtn)
+
+            const li = document.createElement("li");
+            li.textContent = InputName;
+
+            todoList.append(li);
+
+            li.append(liBtnDelete)
+
+            todoInput.value = "";
+
         }
 
 
