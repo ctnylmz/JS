@@ -1,41 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Dom</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Dom</title>
 
-</head>
+    </head>
 
-<body>
-    <h1>Hello Javascript Dom</h1>
+    <body>
+        <h1>Hello Javascript Dom</h1>
 
-    <ul>
-        <li id="my-i">My Id One</li>
-        <li class="my-class">My Class One</li>
-        <li class="my-class">My Class Two</li>
-    </ul>
+        <ul>
+            <li id="my-i">My Id One</li>
+            <li class="my-class">My Class One</li>
+            <li class="my-class">My Class Two</li>
+        </ul>
+        
+    
 
-    <p>
-        Modern frontends generally use querySelector / querySelectorAll.
-        They follow the CSS selector logic, are readable, and work smoothly with forEach.
-        getElementById is preferred only for single, clearly defined elements.
-    </p>
+        <p>
+            Modern frontends generally use querySelector / querySelectorAll. <br>
+            They follow the CSS selector logic, are readable, and work smoothly with forEach. <br>
+            getElementById is preferred only for single, clearly defined elements.
+        </p>
 
-    <script>
-        const myId = document.getElementById("my-i");
-        const myClass = document.getElementsByClassName("my-class");
-        const myTagName = document.getElementsByTagName("ul");
+        <script>
+            const myI = document.getElementById("my-i");
+            myI.style.color = "red";
+        </script>
+    </body>
 
-        const myQueryClass = document.querySelector(".my-class");
-        const myQueryAllClass = document.querySelectorAll(".my-class");
-
-        const myQueryAllUl = document.querySelectorAll("body ul");
-
-        console.log(myQueryAllUl);
-
-    </script>
-</body>
-
-</html>
+    </html>
