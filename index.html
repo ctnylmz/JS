@@ -1,40 +1,45 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Javascript Dom</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom</title>
 
-    </head>
+</head>
 
-    <body>
-        <h1>Hello Javascript Dom</h1>
+<body>
+    <h1>Hello Javascript Dom</h1>
 
-        <button>text color red</button>
-        <ul>
-            <li id="my-i">My Id One</li>
-            <li class="my-class">My Class One</li>
-            <li class="my-class">My Class Two</li>
-        </ul>
-        
-    
+    <button>query Selector</button>
 
-        <p>
-            Modern frontends generally use querySelector / querySelectorAll. <br>
-            They follow the CSS selector logic, are readable, and work smoothly with forEach. <br>
+    <ul>
+        <li id="my-i">My Id One</li>
+        <li class="my-class">My Class One</li>
+        <li class="my-class">My Class Two</li>
+    </ul>
+
+
+
+    <!--
+            Modern frontends generally use querySelector / querySelectorAll. 
+            They follow the CSS selector logic, are readable, and work smoothly with forEach. 
             getElementById is preferred only for single, clearly defined elements.
-        </p>
+    -->
 
-        <script>
-            const btn = document.querySelector("button");
-            const myI = document.getElementById("my-i");
+    <script>
+        const btn = document.querySelector("button");
+        const myClass = document.querySelectorAll(".my-class");
 
-            btn.addEventListener("click",function(){
-                myI.style.color = "red"
-            })
+        btn.addEventListener("click", function () {
 
-        </script>
-    </body>
+            for (let index = 0; index < myClass.length; index++) {
+                const element = myClass[index];
+                element.style.color = "red";
+            }
+        })
 
-    </html>
+    </script>
+</body>
+
+</html>
