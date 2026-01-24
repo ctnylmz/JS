@@ -11,7 +11,7 @@
 <body>
     <h1>Hello Javascript Dom</h1>
 
-    <button>query Selector</button>
+    <button>dark mode</button>
 
     <ul>
         <li id="my-i">My Id One</li>
@@ -27,19 +27,7 @@
             getElementById is preferred only for single, clearly defined elements.
     -->
 
-    <script>
-        const btn = document.querySelector("button");
-        const myClass = document.getElementsByClassName("my-class");
-
-        btn.addEventListener("click", function () {
-
-            for (let index = 0; index < myClass.length; index++) {
-                const element = myClass[index];
-                element.style.color = "red";
-            }
-        })
-
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
