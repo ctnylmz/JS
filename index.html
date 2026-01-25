@@ -3,31 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Dom</title>
-
 </head>
 
 <body>
     <h1>Hello Javascript Dom</h1>
 
-    <button>dark mode</button>
-
-    <ul>
-        <li id="my-i">My Id One</li>
-        <li class="my-class">My Class One</li>
-        <li class="my-class">My Class Two</li>
+    <ul id="list">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
     </ul>
 
+    <script>
+        const list = document.querySelector("#list");
 
+        const li = document.createElement("li");
+        li.textContent = "Four";
 
-    <!--
-            Modern frontends generally use querySelector / querySelectorAll. 
-            They follow the CSS selector logic, are readable, and work smoothly with forEach. 
-            getElementById is preferred only for single, clearly defined elements.
-    -->
-
-    <script src="app.js"></script>
+        list.appendChild(li);
+    </script>
 </body>
 
 </html>
