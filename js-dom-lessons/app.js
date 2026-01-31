@@ -1,20 +1,11 @@
-const colors = ["Red", "Blue", "Blue", "Black", "White"];
+const personName = "Jack";
 
-function readColors() {
-    for (let i = 0; i < colors.length; i++) {
-        console.log(colors[i]);
-    }
+getPersonName = () => {
+  return personName;
 }
 
-readColors();
+const result = getPersonName();
+console.log(result);
 
-console.log("-------------------");
-/* Arrow Function */
-
-const arrayFunctionReadColors = () => {
-    for (let i = 0; i < colors.length; i++) {
-        console.log(colors[i]);
-    }
-};
-
-arrayFunctionReadColors();
+const upperCaseResult = result.toLocaleUpperCase();
+console.log(upperCaseResult);
