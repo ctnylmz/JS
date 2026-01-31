@@ -1,11 +1,9 @@
-const personName = "Jack";
+const list = document.querySelector(".list");
 
-getPersonName = () => {
-  return personName;
-}
+let students = ["John", "Emma", "Michael", "Sophia", "Daniel"];
 
-const result = getPersonName();
-console.log(result);
 
-const upperCaseResult = result.toLocaleUpperCase();
-console.log(upperCaseResult);
+students.forEach(student => {
+    list.innerHTML += `<li>${student}</li>`;
+});
+
