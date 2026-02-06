@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Hello Javascript Dom</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>JS DOM Popup</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
 
-    <h1 id="dom">Dom</h1>
+  <div class="container">
+    <h1>DOM Popup</h1>
+    <button class="open-btn">Open Popup</button>
+  </div>
 
-        <div class="card">
-                Mousemove 
-            <p class="inte"></p>
-        </div>
-   
+  <!-- Overlay -->
+  <div class="popup-overlay hidden">
+    <div class="popup-box">
+      <span class="close-btn">×</span>
+
+      <div class="popup-content">
+        <h3>Boz Training</h3>
+        <p>JavaScript Training</p>
+        <button class="detail-btn">View Details</button>
+      </div>
     </div>
+  </div>
 
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
-
 </html>
