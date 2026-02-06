@@ -1,17 +1,9 @@
-const btn = document.querySelector(".btn");
-const cards = document.querySelectorAll(".card");
+const card = document.querySelector(".card");
+const inte = document.querySelector(".inte");
 
-btn.addEventListener("click", function () {
 
-    const firstHidden = document.querySelector(".card.hidden");
+card.addEventListener("mousemove", function(e){
 
-    firstHidden.classList.remove("hidden")
+    inte.textContent = "X: " + e.offsetX + " Y:" + e.offsetY
+
 });
-
-cards.forEach(card => {
-    card.classList.add("hidden")
-
-    card.addEventListener("click", function (e) {
-        e.target.remove();
-    })
-})
