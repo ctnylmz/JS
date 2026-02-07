@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header #header {
+    background-color: black;
+    color: white;
+    position: relative;
+
+}
+
+header #header .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+
+header #header .nav-wrapper .menuBtn {
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+header #header .nav-wrapper .navbar {
+    z-index: 10;
+    position: absolute;
+    list-style: none;
+    border-top: 1px solid white;
+    top: 50px;
+    left: 0;
+    background-color: black;
+    width: 15.2%;
+    height: calc(100vh - 51px);
+}
+
+header #header .nav-wrapper .navbar.hidden {
+    display: none;
+}
+
+header #header .nav-wrapper .navbar li{
+   margin: 10px;
+   cursor: pointer;
+}
+
+header #header .nav-wrapper .navbar li:hover{
+   color: black;
+   background-color: white;
+   padding: 3px;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 50px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 50px);
+
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
