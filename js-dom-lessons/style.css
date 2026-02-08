@@ -4,50 +4,51 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(237, 234, 234);
+
+}
 .container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  gap: 30px;
 }
 
-button {
-  margin-top: 20px;
-  padding: 8px 14px;
-  background: red;
-  color: white;
-  border: none;
-  cursor: pointer;
+
+.card {
+  background-color: white !important;
+  color: black;
+  padding: 10px;
 }
 
-/* Overlay */
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+.card-wrapper{
   display: flex;
-  align-items: center;
+  height: 50px;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+
 }
 
-.popup-overlay.hidden {
-  display: none;
+.input{
+  padding: 10px;
 }
 
-/* Popup box */
-.popup-box {
-  background: white;
-  padding: 30px;
-  width: 100%;
-  max-width: 350px;
-  text-align: center;
-  position: relative;
-}
-
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 10px;
+.btn{
   cursor: pointer;
+  padding: 10px;
+
 }
+
+ul{
+  list-style: none;
+  padding: 10px;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+

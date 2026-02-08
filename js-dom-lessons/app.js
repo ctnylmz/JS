@@ -1,24 +1,14 @@
-const openBtn = document.querySelector(".open-btn");
-const popup = document.querySelector(".popup-overlay");
-const closeBtn = document.querySelector(".close-btn");
+const userInput = document.querySelector('input[name="user"]');
+const userForm = document.querySelector('.card');
+const list = document.querySelector('.list');
 
 
+userForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  console.log(userForm.user.value);
+  list.innerHTML = list.innerHTML + `<li>${userForm.user.value}</li>`
+  userForm.user.value = ""
 
-openBtn.addEventListener("click", function(){
 
-    popup.classList.remove("hidden")
+  
 })
-
-
-closeBtn.addEventListener("click", function(){
-
-    popup.classList.add("hidden")
-})
-
-
-popup.addEventListener("click", function (e) {
-    
-  if (e.target === popup) {
-    popup.classList.add("hidden");
-  }
-});

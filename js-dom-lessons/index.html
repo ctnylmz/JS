@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS DOM Popup</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="container">
-    <h1>DOM Popup</h1>
-    <button class="open-btn">Open Popup</button>
-  </div>
+    <h1>DOM Form</h1>
 
-  <!-- Overlay -->
-  <div class="popup-overlay hidden">
-    <div class="popup-box">
-      <span class="close-btn">×</span>
+    <form class="card">
 
-      <div class="popup-content">
-        <h3>Boz Training</h3>
-        <p>JavaScript Training</p>
-        <button class="detail-btn">View Details</button>
+      <div class="card-wrapper">
+        <input class="input" type="text" placeholder="Enter your name" name="user" />
+        <input class="btn" type="submit" value="Kaydet">
+
       </div>
-    </div>
+      <ul class="list"> </ul>
+
+    </form>
   </div>
+
+
 
   <script src="app.js"></script>
 </body>
+
 </html>
