@@ -37,8 +37,14 @@ body{
 .input{
   padding: 10px;
   width: 100%;
-
 }
+
+.input.active{
+ border: 4px solid green;
+}
+
+
+
 
 .btn{
   cursor: pointer;

@@ -7,6 +7,8 @@ const message = document.querySelector('.message');
 
 const regexPatern = /^.{5,10}$/;
 
+
+
 userForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -32,5 +34,16 @@ userForm.addEventListener("submit", function (e) {
     }, 7000);
   }
 
-
 })
+
+userInput.addEventListener("keyup", e => {
+
+  let succes = regexPatern.test(e.target.value);
+
+  if (succes) {
+    userInput.classList.add("active");
+  } else {
+    userInput.classList.remove("active");
+  }
+
+});
