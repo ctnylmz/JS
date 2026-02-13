@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card-wrapper">
+      <div class="card">
+        <hr>
+        <div class="title">element.addEventListener(eventType, callback) ?</div>
+        <div class="description-wrapper">
+          <div class="description">EventType olayın hangi durumda tetikleneceğini belirtir.</div>
+          <div class="description">Örnek: (Click) , (keydown,keyup) , (submit,input) </div>
+          <hr>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">element.addEventListener(eventType, callback) ?</div>
+        <div class="description-wrapper">
+          <div class="description">function(e) nedir?</div>
+          <div class="description">
+            <pre>
+element.addEventListener("click", function(e) {
+console.log(e);
+});
+          </pre>
+          </div>
+          <div class="description">click → Tıklama gerçekleştiğinde çalışır ; e → O tıklama ile ilgili bilgileri taşır
+          </div>
+          <hr>
+        </div>
+      </div>
+
+      
+  <form id="form">
+    <input type="text" id="username" placeholder="Kullanıcı Adı">
+    <small id="charCount">0</small>
+
+    <input type="password" id="password" placeholder="Şifre">
+    <small id="capsWarning"></small>
+
+    <button type="submit">Giriş Yap</button>
+    <button type="button" id="clearBtn">Temizle</button>
+</form>
+
+    </div>
+   
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
