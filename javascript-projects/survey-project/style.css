@@ -9,33 +9,47 @@
     margin: 0 auto;
 }
 
-header #header{
-    width: 100%;
+header #header {
     text-align: center;
+    padding: 60px;
+    background-color: rgb(237, 237, 237);
 }
 
-header #header .title{
-    padding: 100px;
-    background-color: rgb(237, 237, 237);
+header #header .title {
     color: red;
     font-size: 24px;
+}
+
+header #header .reply {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 10px;
+}
+
+header #header .reply.hidden {
+   display: none;
+}
+
+header #header .reply .value{
+   color: red;
 }
 
 main #hero {
     background-color: rgb(78, 77, 77);
     color: white;
-   
+
 }
 
-main #hero form{
+main #hero form {
     padding: 20px;
 }
 
-main #hero form .card{
+main #hero form .card {
     margin: 20px 0;
 }
 
-.btn{
+.btn {
     padding: 12px 24px;
-    cursor: pointer ;
+    cursor: pointer;
 }
