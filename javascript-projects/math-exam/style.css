@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header .exam-header {
+    text-align: center;
+    padding: 60px;
+    background-color: rgb(237, 237, 237);
+}
+
+header .exam-header .exam-title {
+    color: red;
+    font-size: 24px;
+}
+
+header .exam-header .exam-result {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 10px;
+}
+
+header .exam-header .exam-result.hidden {
+   display: none;
+}
+
+
+header .exam-header .exam-result .exam-context {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 10px;
+}
+
+
+header .exam-header .exam-result .exam-percentage{
+   color: red;
+}
+
+
+/* */
+
+main .math-exam {
+    background-color: rgb(78, 77, 77);
+    color: white;
+
+}
+
+main .math-exam form {
+    padding: 20px;
+}
+
+main .math-exam form .math-exam-card {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 24px;
+    cursor: pointer;
+}
