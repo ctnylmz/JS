@@ -1,11 +1,38 @@
-let products = [["iphone",100] , ["samsung",50],"huawei"]
-let product2 = [["assus",75] , ["hp",50]]
+// Add Array
+let productList = [["iphone", 100, false], ["samsung", 50, true], "huawei" ]
+   
+console.log("product list:", [...productList])
 
-products.pop();
-products.push(["huawei",25])
+// Remove the last element ("huawei" string)
+productList.pop()
 
-products = products.concat(product2)
+console.log("After pop :", [...productList])
 
-products.splice(0,1)
+// Add Huawei 
+productList.push(["huawei", 25, false])
 
-console.log(products);
+console.log("After push", [...productList])
+
+
+// add additionalProducts concat
+let additionalProducts = [["asus", 75, false],["hp", 50, true]]
+      
+productList = productList.concat(additionalProducts)
+
+console.log("After merging additional products:", [...productList])
+
+// filter
+let inactiveProducts = productList.filter(product => {
+   return !product[product.length - 1]
+})
+
+console.log("Inactive products:", inactiveProducts)
+
+
+// Map
+let discountedPrices = productList.map(product => {
+    let price = product[1]  
+    return price - 10
+})
+
+console.log("Discounted prices:", discountedPrices)
