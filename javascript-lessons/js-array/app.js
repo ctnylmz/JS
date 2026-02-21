@@ -36,3 +36,17 @@ let discountedPrices = productList.map(product => {
 })
 
 console.log("Discounted prices:", discountedPrices)
+
+
+// find and filter
+
+let colorList = ["red","black","yellow","blue","green","yellow"]
+
+const firstYellow = colorList.find(color => color === "yellow")
+
+console.log("First yellow:", firstYellow)
+
+const yellowCount = colorList.filter(color => color === "yellow").length
+
+console.log("Yellow count:", yellowCount)
+
