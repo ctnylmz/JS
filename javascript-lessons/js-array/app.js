@@ -28,7 +28,7 @@ let inactiveProducts = productList.filter(product => {
 
 console.log("Inactive products:", inactiveProducts)
 
-
+ 
 // Map
 let discountedPrices = productList.map(product => {
     let price = product[1]  
