@@ -1,19 +1,22 @@
-const text = document.querySelector(".text")
-const btn = document.querySelector(".btn")
+const form = document.querySelector(".hero")
 const search = document.querySelector(".search")
 const list = document.querySelector(".list")
 
-btn.addEventListener("click", function () {
-    list.innerHTML += `<li>${text.value} <button class="btn" onclick="deletes(event)">Delete</button>  </li>`
+form.addEventListener("submit", function (e) {
+    e.preventDefault()
 
-    text.value = ""
+    list.innerHTML += `<li >${form.text.value} <button class="btn delete">Delete</button></li>`
+
+    form.text.value = ""
 
 })
 
-function deletes(e) {
-    e.target.closest("li").remove();
-    input.value = ""
-}
+list.addEventListener('click', e => {
+
+    if (e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
+    }
+})
 
 search.addEventListener("input", function () {
     const lists = document.querySelectorAll(".list li")
@@ -22,7 +25,7 @@ search.addEventListener("input", function () {
         const text = li.childNodes[0].nodeValue.trim().toLowerCase()
 
         if (text.includes(search.value)) {
-            li.style.display = "list-item"
+            li.style.display = "flex"
         } else {
             li.style.display = "none"
         }
