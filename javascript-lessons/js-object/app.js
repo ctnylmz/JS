@@ -9,8 +9,14 @@ let student = {
 
     logout: function () {
         console.log("Student logged out successfully.");
+    },
+    printLessons(){
+     // console.log(lesson);
+        console.log(this.lesson);
     }
 }
+
+student.printLessons();
 
 student.login();
 
