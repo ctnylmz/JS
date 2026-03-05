@@ -10,3 +10,5 @@ console.log(name + " " + age);
 localStorage.setItem("name","Jack");
 localStorage.age = "30";
 
+// localStorage.clear();
+localStorage.removeItem("name");
