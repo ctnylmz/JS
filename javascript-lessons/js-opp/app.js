@@ -37,5 +37,15 @@ class User {
     }
 }
 
+class Admin extends User {
+    deleteUser(user){
+        console.log(`${user.username} kullanıcısı silindi`)
+        return this;
+    }
+}
+
+
+const admin = new Admin("yasin","yasin@gmail.com")
 const userOne = new User("can","can@gmail.com")
-userOne.login().logout()
+
+admin.login().deleteUser(userOne).logout()
