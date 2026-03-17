@@ -38,14 +38,20 @@ class User {
 }
 
 class Admin extends User {
+
+    constructor(username,email,role){
+        super(username,email)   // 🔥 parent constructor çağrıldı
+        this.role = role
+    }
+
     deleteUser(user){
         console.log(`${user.username} kullanıcısı silindi`)
         return this;
     }
+
 }
 
-
-const admin = new Admin("yasin","yasin@gmail.com")
+const admin = new Admin("yasin","yasin@gmail.com","superadmin")
 const userOne = new User("can","can@gmail.com")
 
 admin.login().deleteUser(userOne).logout()
