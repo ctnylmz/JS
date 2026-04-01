@@ -5,11 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
+
+    <main>
+        <section class="slider">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="slider-track">
+                        <img src="https://picsum.photos/seed/2/600/400" alt="">
+                        <img src="https://picsum.photos/seed/1/600/400" alt="">
+                        <img src="https://picsum.photos/seed/3/600/400" alt="">
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev" aria-label="Önceki resim">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="next" aria-label="Sonraki resim">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="app.js"></script>
 </body>
 
