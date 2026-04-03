@@ -4,30 +4,25 @@ const next = document.querySelector(".slider .next")
 
 let SliderNumber = 0;
 
-images.forEach(image => {
-    image.classList.add("hidden")
-});
-
-images[SliderNumber].classList.remove("hidden")
+images[SliderNumber].classList.add("active")
 
 next.addEventListener("click", function () {
     images.forEach(image => {
-        image.classList.add("hidden")
+        image.classList.remove("active")
     });
 
     SliderNumber = SliderNumber + 1;
 
-    images[SliderNumber].classList.remove("hidden")
+    images[SliderNumber].classList.add("active")
 })
 
-prev.addEventListener("click", function (e) {
-    images.forEach(image => {
-        image.classList.add("hidden")
+prev.addEventListener("click",function (e){
 
-    })
+ images.forEach(image => {
+    image.classList.remove("active")
+ }) 
 
-    SliderNumber = SliderNumber - 1;
+ SliderNumber = SliderNumber - 1;
 
-    images[SliderNumber].classList.remove("hidden")
-
-})
+ images[SliderNumber].classList.add("active")
+});

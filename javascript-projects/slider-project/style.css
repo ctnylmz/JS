@@ -16,9 +16,6 @@ button {
     cursor: pointer; 
 }
 
-.slider img.hidden {
-    display: none;
-}
 
 .slider {
     margin-top: 32px;
@@ -29,6 +26,21 @@ button {
     max-width: 600px;
     margin: 0 auto;
     position: relative;
+}
+
+.slider .slider-wrapper .slider-track{
+     position: relative;
+    height: 400px;
+}
+
+.slider .slider-wrapper .slider-track img{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.slider .slider-wrapper .slider-track img.active{
+    opacity: 1;
 }
 
 .slider .slider-wrapper .slider-controls i{
