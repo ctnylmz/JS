@@ -26,3 +26,19 @@ prev.addEventListener("click",function (e){
 
  images[SliderNumber].classList.add("active")
 });
+
+setInterval(() => {
+    images.forEach(image => {
+        image.classList.remove("active");
+    });
+
+    SliderNumber = SliderNumber - 1;
+
+    // sona gelince başa dön
+    if (SliderNumber < 0) {
+        SliderNumber = images.length - 1;
+    }
+
+    images[SliderNumber].classList.add("active");
+
+}, 3000);
