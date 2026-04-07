@@ -1,4 +1,6 @@
 const images = document.querySelectorAll(".slider img")
+const track = document.querySelector(".slider .slider-track");
+
 const prev = document.querySelector(".slider .prev")
 const next = document.querySelector(".slider .next")
 
@@ -7,38 +9,34 @@ let SliderNumber = 0;
 images[SliderNumber].classList.add("active")
 
 next.addEventListener("click", function () {
-    images.forEach(image => {
-        image.classList.remove("active")
-    });
-
+   
     SliderNumber = SliderNumber + 1;
 
-    images[SliderNumber].classList.add("active")
+    if (SliderNumber > images.length - 1) {
+        SliderNumber = 0;
+    }
+
+    track.style.transform = `translateX(-${SliderNumber * 100}%)`;
 })
 
 prev.addEventListener("click",function (e){
 
- images.forEach(image => {
-    image.classList.remove("active")
- }) 
 
  SliderNumber = SliderNumber - 1;
 
- images[SliderNumber].classList.add("active")
+ track.style.transform = `translateX(-${SliderNumber * 100}%)`;
+
 });
 
 setInterval(() => {
-    images.forEach(image => {
-        image.classList.remove("active");
-    });
-
-    SliderNumber = SliderNumber - 1;
+  
+    SliderNumber = SliderNumber + 1;
 
     // sona gelince başa dön
-    if (SliderNumber < 0) {
-        SliderNumber = images.length - 1;
+    if (SliderNumber > images.length - 1) {
+        SliderNumber = 0;
     }
 
-    images[SliderNumber].classList.add("active");
+     track.style.transform = `translateX(-${SliderNumber * 100}%)`;
 
-}, 3000);
+}, 7000);
