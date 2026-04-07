@@ -6,10 +6,9 @@ const next = document.querySelector(".slider .next")
 
 let SliderNumber = 0;
 
-images[SliderNumber].classList.add("active")
 
 next.addEventListener("click", function () {
-   
+
     SliderNumber = SliderNumber + 1;
 
     if (SliderNumber > images.length - 1) {
@@ -19,17 +18,21 @@ next.addEventListener("click", function () {
     track.style.transform = `translateX(-${SliderNumber * 100}%)`;
 })
 
-prev.addEventListener("click",function (e){
+prev.addEventListener("click", function (e) {
 
 
- SliderNumber = SliderNumber - 1;
+    SliderNumber = SliderNumber - 1;
 
- track.style.transform = `translateX(-${SliderNumber * 100}%)`;
+    if (SliderNumber < 0) {
+        SliderNumber = images.length - 1;
+    }
+
+    track.style.transform = `translateX(-${SliderNumber * 100}%)`;
 
 });
 
 setInterval(() => {
-  
+
     SliderNumber = SliderNumber + 1;
 
     // sona gelince başa dön
@@ -37,6 +40,6 @@ setInterval(() => {
         SliderNumber = 0;
     }
 
-     track.style.transform = `translateX(-${SliderNumber * 100}%)`;
+    track.style.transform = `translateX(-${SliderNumber * 100}%)`;
 
 }, 7000);
