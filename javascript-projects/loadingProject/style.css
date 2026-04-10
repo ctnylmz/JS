@@ -1,38 +1,119 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: 1110px;
     margin: 0 auto;
     width: 90%;
-    height: 80vh;
+}
+
+
+/* Main Start */
+
+.hero {
+    margin-top: 32px;
+}
+
+.hero .hero-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+    gap: 32px;
+}
+
+.hero .hero-wrapper .hero-image {
+    width: 50%;
+    height: 230px;
+}
+
+.hero .hero-wrapper .hero-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .hero-wrapper .hero-content {
+    width: 50%;
+    height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:768px) {
+    .hero .hero-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero .hero-wrapper .hero-image {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .hero .hero-wrapper .hero-content {
+        max-width: 500px;
+        width: 100%;
+        gap: 8px;
+
+    }
+
+}
+
+/* */
+.loading {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 9999;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+.loading.hidden {
+    display: none;
 }
 
 
-.loading .loading-wrapper{
-    max-width: 400px;
+.loading .loading-wrapper {
+    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
-    text-align: center;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     gap: 8px;
+    transform: translateY(-20px);
 }
 
-.loading .loading-wrapper .loading-rod-including{
-    width: 100%;
+.loading .loading-content {
+    text-align: center;
+}
+
+.loading .loading-bar-content {
+    margin-top: 4px;
+    border: 1px solid gray;
+    width: 300px;
     height: 10px;
-    border: 1px solid purple;
+
+    position: relative;
+
 }
 
-.loading .loading-wrapper .loading-rod-including .loading-rod{
+.loading .loading-bar-content .loading-bar {
+    position: absolute;
     width: 0%;
     height: 10px;
     background-color: red;
+
 }

@@ -1,21 +1,21 @@
-const number = document.querySelector(".loading .number");
+const loadingBar = document.querySelector(".loading .loading-bar")
+const loadingNumber = document.querySelector(".loading .loading-number")
 
-const loadingRod = document.querySelector(".loading .loading-rod-including .loading-rod");
-
-let stateNumber = 0;
+const loading = document.querySelector(".loading")
 
 
-let interval = setInterval(() => {
-    stateNumber = stateNumber + 1;
+let setNumber = 0;
 
-    loadingRod.style.width = `${stateNumber}%`;
-    number.innerHTML = `${stateNumber}%`;
+let interval = setInterval(function () {
+    setNumber = setNumber + 1;
 
-    if (stateNumber === 100) {
+    loadingBar.style.width = setNumber + "%";
+    loadingNumber.innerHTML = setNumber + "%";
+
+    if (setNumber === 100) {
         clearInterval(interval)
-        document.body.innerHTML = "Hello World"
+        setTimeout(() => {
+            loading.classList.add("hidden")
+        }, 1000);
     }
-
 }, 50)
-
-
