@@ -15,7 +15,7 @@ let student = {
     logout: function () {
         console.log("Student logged out successfully.");
     },
-    printLessons(){
+    printLessons: function(){
      // console.log(lesson);
         console.log(this.lesson);
     }
