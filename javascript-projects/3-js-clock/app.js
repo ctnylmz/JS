@@ -11,4 +11,4 @@ setInterval(function () {
 
     clock.textContent = hour + " " + minute + " " + second
 
-}, 1000);
+}, 1000); 
