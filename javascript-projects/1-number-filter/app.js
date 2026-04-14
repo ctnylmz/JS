@@ -1,20 +1,23 @@
-const input = document.querySelector("input");
-const ul = document.querySelector("ul");
+const list = document.querySelector(".number-filter .list")
 
-let numbers = [10, 20, 30, 40, 50, 330, 1, 100]
+const input = document.querySelector(".number-filter .input")
+
+let numbers = [10, 80, 40, 1, 50, 100, 30, 4]
 
 numbers.forEach(number => {
-    ul.innerHTML += `<li> ${number} </li>`
+  list.innerHTML = list.innerHTML + "<li>" + number + "</li>"
 })
 
-input.addEventListener("input", function (e) {
-    const results = numbers.filter(number => number.toString().startsWith(e.target.value))
-    console.log(results);
-    
-    ul.innerHTML = ""
 
-    results.forEach(result => {
-        ul.innerHTML += `<li> ${result} </li>`
-    })
+input.addEventListener("input", function () {
+  const numbersFilter = numbers.filter(number => number.toString().startsWith(input.value))
+
+  list.innerHTML = ""
+
+  numbersFilter.forEach(number => {
+    list.innerHTML = list.innerHTML + "<li>" + number + "</li>" 
+  })
+
 
 })
+

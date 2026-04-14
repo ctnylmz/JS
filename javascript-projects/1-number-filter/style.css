@@ -1,11 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container {
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
+    max-width: 1110px;
+    margin: 0 auto;
+    width: 98%;
 }
 
+.number-filter {
+    margin-top: 32px;
+}
+
+.number-filter .number-filter-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: red;
+
+    text-align: center;
+    padding: 16px;
+}
+
+.number-filter .number-filter-wrapper .input {
+    margin-bottom: 16px;
+   
+    max-width: 250px;
+    width: 100%;
+
+}
+
+
+.number-filter .number-filter-wrapper .list li{
+    
+    
+    max-width: 50px;
+    width: 100%;
+    margin: auto;
+    
+    margin-bottom: 8px;
+    border: 1px solid black;
+
+}
