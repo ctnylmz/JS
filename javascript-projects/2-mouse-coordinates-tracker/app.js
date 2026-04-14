@@ -1,9 +1,9 @@
-const card = document.querySelector(".card");
-const inte = document.querySelector(".inte");
+const mouseWrapper = document.querySelector(".mouse .mouse-wrapper")
 
+const say = document.querySelector(".mouse .mouse-wrapper .say")
 
-card.addEventListener("mousemove", function(e){
+mouseWrapper.addEventListener("mousemove", function (e) {
 
-    inte.textContent = "X: " + e.offsetX + " Y:" + e.offsetY
+    say.innerHTML = "X:" + e.clientX + " " + "Y:" + e.clientY
 
-});
+})
