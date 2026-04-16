@@ -22,12 +22,11 @@ btnPomodoro.addEventListener("click", function () {
     btnPomodoro.classList.add("active")
 
     clearInterval(interval);
-    interval = null;
 
     pomodoroMinute = 25;
     pomodoroSecond = 0;
 
-    time.innerHTML = "25:00"
+    time.innerHTML = pomodoroMinute.toString().padStart(2, "0") + ":" + pomodoroSecond.toString().padStart(2, "0")
 })
 
 btnBreakTime.addEventListener("click", function () {
@@ -35,44 +34,36 @@ btnBreakTime.addEventListener("click", function () {
     btnBreakTime.classList.add("active")
 
     clearInterval(interval);
-    interval = null;
 
     pomodoroMinute = 5;
     pomodoroSecond = 0;
 
-    time.innerHTML = "5:00"
+    time.innerHTML = pomodoroMinute.toString().padStart(2, "0") + ":" + pomodoroSecond.toString().padStart(2, "0")
 })
 
 start.addEventListener("click", function () {
-    if (interval) return;
+    clearInterval(interval);
 
-    interval = setInterval(() => {
+    interval = setInterval(function () {
 
-
-        if (pomodoroSecond === 0) {
-            if (pomodoroMinute >= 1) {
-                pomodoroSecond = 60;
-                pomodoroMinute = pomodoroMinute - 1;
-            }
-        }
-
-        pomodoroSecond = pomodoroSecond - 1;
-
-        let s = pomodoroSecond.toString().padStart(2, "0");
-        let m = pomodoroMinute.toString().padStart(2, "0");
-
-        time.innerHTML = `${m}:${s}`;
 
         if (pomodoroMinute === 0 && pomodoroSecond === 0) {
             alert("Finish")
             clearInterval(interval); // zamanlayıcı durur
-            interval = null;
+        } else {
+            if (pomodoroSecond === 0) {
+                pomodoroMinute = pomodoroMinute - 1;
+                pomodoroSecond = 59;
+            }else {
+                pomodoroSecond = pomodoroSecond - 1;
+            }
+             time.innerHTML = pomodoroMinute.toString().padStart(2, "0") + ":" + pomodoroSecond.toString().padStart(2, "0")
         }
+
 
     }, 1000)
 })
 
 pause.addEventListener("click", function () {
     clearInterval(interval); // zamanlayıcı durur
-    interval = null; // tekrar başlatmayı mümkün kılmak için
 })
