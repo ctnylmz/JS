@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "TL",
+    "value": 1
+  },
+  {
+    "id": 2,
+    "name": "USD",
+    "value": 38.45
+  },
+  {
+    "id": 3,
+    "name": "EUR",
+    "value": 40.00
+  },
+  {
+    "id": 4,
+    "name": "AUD",
+    "value": 24.63
+  },
+  {
+    "id": 5,
+    "name": "CAD",
+    "value": 27.81
+  },
+  {
+    "id": 6,
+    "name": "JPY",
+    "value": 0.26
+  }
+]
