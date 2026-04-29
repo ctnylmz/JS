@@ -2,39 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Döviz Çeviri</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- api - json  (tl usd eur aud cad jpy) -->
 
-<select class="one">
-  <option value="TL">TL</option>
-  <option value="USD">USD</option>
-  <option value="EUR">EUR</option>
-  <option value="AUD">AUD</option>
-  <option value="CAD">CAD</option>
-  <option value="JPY">JPY</option>
-</select>
+  <section class="currency-converter">
+    <div class="container">
+      <div class="currency-converter-wrapper">
+        <div class="title">Currency Converter</div>
 
+        <select class="fromCurrency">
+          <option value="TL">TL</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+          <option value="JPY">JPY</option>
+        </select>
 
-<select class="two">
-  <option value="TL">TL</option>
-  <option value="USD">USD</option>
-  <option value="EUR">EUR</option>
-  <option value="AUD">AUD</option>
-  <option value="CAD">CAD</option>
-  <option value="JPY">JPY</option>
-</select>
+        <select class="toCurrency">
+          <option value="TL">TL</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+          <option value="JPY">JPY</option>
+        </select>
 
-<input class="oneNumberText" type="number" value="1" min="1">
-<p class="twoNumberText"></p>
+        <input class="amountInput" type="number" value="1" min="1">
 
+        <p class="resultText"></p>
+        <p class="finalResult"></p>
+      </div>
+    </div>
+  </section>
 
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
