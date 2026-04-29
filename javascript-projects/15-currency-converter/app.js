@@ -6,9 +6,9 @@ let twoNumberText = document.querySelector(".resultText")
 let final = document.querySelector(".finalResult")
 
 
-let state = 0;
 
-one.addEventListener("click", function (e) {
+
+one.addEventListener("change", function (e) {
 
     fetch("money.json")
         .then(response => response.json())
@@ -16,25 +16,23 @@ one.addEventListener("click", function (e) {
             let ones = data.find(item => item.name === one.value);
             let twos = data.find(item => item.name === two.value);
 
-            twoNumberText.innerHTML = (ones.value / twos.value).toFixed(4)
-            state = twoNumberText.innerHTML
-            final.innerHTML = 1 + " " + one.value + " = " + (ones.value / twos.value).toFixed(4) + " " + two.value
+
+            twoNumberText.innerHTML = (ones.value / twos.value * oneNumberText.value).toFixed(2)
+            final.innerHTML = 1 + " " + one.value + " = " + (ones.value / twos.value).toFixed(2) + " " + two.value
 
         });
 })
 
 
-two.addEventListener("click", function (e) {
-     fetch("money.json")
+two.addEventListener("change", function (e) {
+    fetch("money.json")
         .then(response => response.json())
         .then(data => {
             let ones = data.find(item => item.name === one.value);
             let twos = data.find(item => item.name === two.value);
 
-            twoNumberText.innerHTML = (ones.value / twos.value).toFixed(4)
-            state = twoNumberText.innerHTML
-            final.innerHTML = 1 + " " + one.value + " = " + (ones.value / twos.value).toFixed(4) + " " + two.value
-
+            twoNumberText.innerHTML = (ones.value / twos.value * oneNumberText.value).toFixed(2)
+            final.innerHTML = 1 + " " + one.value + " = " + (ones.value / twos.value).toFixed(2) + " " + two.value
         });
 
 })
@@ -43,6 +41,15 @@ two.addEventListener("click", function (e) {
 
 oneNumberText.addEventListener("input", function () {
 
-    twoNumberText.innerHTML = state * oneNumberText.value
+    fetch("money.json")
+        .then(response => response.json())
+        .then(data => {
+            let ones = data.find(item => item.name === one.value);
+            let twos = data.find(item => item.name === two.value);
+
+            twoNumberText.innerHTML = (ones.value / twos.value * oneNumberText.value).toFixed(2)
+            final.innerHTML = 1 + " " + one.value + " = " + (ones.value / twos.value).toFixed(2) + " " + two.value
+
+        });
 
 })
