@@ -16,28 +16,36 @@
       <div class="currency-converter-wrapper">
         <div class="title">Currency Converter</div>
 
-        <select class="fromCurrency">
-          <option value="TL">TL</option>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="AUD">AUD</option>
-          <option value="CAD">CAD</option>
-          <option value="JPY">JPY</option>
-        </select>
+        <div class="top">
+          <select class="fromCurrency">
+            <option value="TL">TL</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="JPY">JPY</option>
+          </select>
 
-        <select class="toCurrency">
-          <option value="TL">TL</option>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="AUD">AUD</option>
-          <option value="CAD">CAD</option>
-          <option value="JPY">JPY</option>
-        </select>
+          <input class="amountInput" type="number" value="1" min="1">
+        </div>
 
-        <input class="amountInput" type="number" value="1" min="1">
+        <div class="footer">
 
-        <p class="resultText"></p>
-        <p class="finalResult"></p>
+          <select class="toCurrency">
+            <option value="TL">TL</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="JPY">JPY</option>
+          </select>
+
+          <p class="resultText">0</p>
+
+        </div>
+
+
+        <p class="finalResult">0</p>
       </div>
     </div>
   </section>

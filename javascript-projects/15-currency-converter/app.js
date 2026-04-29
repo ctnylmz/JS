@@ -1,9 +1,9 @@
-let one = document.querySelector(".one")
-let two = document.querySelector(".two")
-let oneNumberText = document.querySelector(".oneNumberText")
+let one = document.querySelector(".fromCurrency")
+let two = document.querySelector(".toCurrency")
+let oneNumberText = document.querySelector(".amountInput")
 
-let twoNumberText = document.querySelector(".twoNumberText")
-let final = document.querySelector(".final")
+let twoNumberText = document.querySelector(".resultText")
+let final = document.querySelector(".finalResult")
 
 
 let state = 0;
@@ -21,13 +21,13 @@ one.addEventListener("click", function (e) {
                 state = twoNumberText.innerHTML;
                 final.innerHTML = 1 + " " + one.value + " = " + 1 + " " + two.value
             } else if (ones.value > twos.value) {
-                twoNumberText.innerHTML = ones.value / twos.value
+                twoNumberText.innerHTML = (twos.value / ones.value).toFixed(4)
                 state = twoNumberText.innerHTML
-                final.innerHTML = 1 + " " + one.value + " = " + ones.value / twos.value + " " + two.value
+                final.innerHTML = 1 + " " + one.value + " = " + (twos.value / ones.value).toFixed(4) + " " + two.value
             } else if (ones.value < twos.value) {
-                twoNumberText.innerHTML = twos.value / ones.value
+                twoNumberText.innerHTML = (twos.value / ones.value).toFixed(4)
                 state = twoNumberText.innerHTML
-                final.innerHTML = 1 + " " + one.value + " = " + twos.value / ones.value + " " + two.value
+                final.innerHTML = 1 + " " + one.value + " = " + (twos.value / ones.value).toFixed(4) + " " + two.value
             }
 
             console.log(ones.value + " - " + twos.value);
@@ -36,8 +36,7 @@ one.addEventListener("click", function (e) {
 
 
 two.addEventListener("click", function (e) {
-
-          fetch("money.json")
+  fetch("money.json")
         .then(response => response.json())
         .then(data => {
             let ones = data.find(item => item.name === one.value);
@@ -48,16 +47,17 @@ two.addEventListener("click", function (e) {
                 state = twoNumberText.innerHTML;
                 final.innerHTML = 1 + " " + one.value + " = " + 1 + " " + two.value
             } else if (ones.value > twos.value) {
-                twoNumberText.innerHTML = ones.value / twos.value
+                twoNumberText.innerHTML = (twos.value / ones.value).toFixed(4)
                 state = twoNumberText.innerHTML
-                final.innerHTML = 1 + " " + one.value + " = " + ones.value / twos.value + " " + two.value
+                final.innerHTML = 1 + " " + one.value + " = " + (twos.value / ones.value).toFixed(4) + " " + two.value
             } else if (ones.value < twos.value) {
-                twoNumberText.innerHTML = twos.value / ones.value
+                twoNumberText.innerHTML = (twos.value / ones.value).toFixed(4)
                 state = twoNumberText.innerHTML
-                final.innerHTML = 1 + " " + one.value + " = " + twos.value / ones.value + " " + two.value
+                final.innerHTML = 1 + " " + one.value + " = " + (twos.value / ones.value).toFixed(4) + " " + two.value
             }
 
-        }); 
+            console.log(ones.value + " - " + twos.value);
+        });    
 
 })
 
