@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1110px;
+    background-color: rgb(241, 241, 241);
+    margin: auto;
+    width: 90%;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature-converter .temperature-converter-wrapper {
+    max-width: 400px;
+    width: 100%;
+    background-color: greenyellow;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 16px;
+    padding: 32px;
+}
+
+.temperature-converter .temperature-converter-wrapper .temperature-converter-card {
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
